@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spring-security-oauth/oauth-jws-jwk-legacy/oauth-resource-server-jws-jwk-legacy" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-security-oauth/oauth-legacy/oauth-authorization-server-legacy" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-security-oauth/oauth-legacy/oauth-resource-server-legacy-1" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-security-oauth/oauth-legacy/oauth-resource-server-legacy-2" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-security-oauth/oauth-legacy/oauth-ui-implicit-angularjs-legacy" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-security-oauth/oauth-legacy/oauth-ui-password-angularjs-legacy" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/RHPROJECT/pom.xml" />
+        <option value="$PROJECT_DIR$/API_Gateway_Server/pom.xml" />
+        <option value="$PROJECT_DIR$/blogMS/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-oauth/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK" />
+</project>
