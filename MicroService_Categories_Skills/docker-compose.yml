@@ -1,0 +1,22 @@
+version: '3'
+services:
+  eureka-server:
+    image: eurekaserver
+    ports:
+      - "8761:8761"
+
+  spring-boot-app:
+    image: microservice-category-skills
+    ports:
+      - "8089:8089"
+    depends_on:
+      - eureka-server
+
+  getway:
+    image: getway
+    ports:
+      - "8090:8090"
+    depends_on:
+      - eureka-server
+
+
