@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  eureka-server:
+    image: eureka  # Use the image name for your Eureka service
+    ports:
+      - "8761:8761"
+    
+  api-gateway:
+    image: getway  # Use the image name for your API Gateway service
+    ports:
+      - "8090:8090"
+    depends_on:
+      - eureka-server
+      - service-attachments
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "root123"  # Correct the assignment
+    ports:
+      - "3306:3306"  
+
+  service-attachments:
+    image: service-attachments  # Use the image name for your MySQL client service
+    ports:
+      - "8091:8091"
+    depends_on:
+      - eureka-server
+      - mysql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/S_A_MS?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root123  # You should provide a password here
+      - SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL=true
+      - SPRING_JPA_PROPERTIES_HIBERNATE_USE_SQL_COMMENTS=true
+    
+  
